@@ -11,7 +11,7 @@ import { Article } from './article.model';
   }
 })
 export class ArticleComponent implements OnInit {
-  
+
   article: Article;
 
   constructor() {
@@ -19,14 +19,15 @@ export class ArticleComponent implements OnInit {
    }
 
   voteUp(): boolean {
-    this.article.votes += 1;
+    this.article.voteUp();
     return false;
   }
 
   voteDown(): boolean {
-    this.article.votes -= 1;
+    this.article.voteDown();
     return false;
   }
+
   ngOnInit() {
   }
 
