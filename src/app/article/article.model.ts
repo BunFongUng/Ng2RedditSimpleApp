@@ -18,7 +18,11 @@ export class Article {
     }
 
     domain(): string {
-        const link: string = this.link.split('//')[1];
-        return link.split('/')[0];
+        try {
+            const link: string = this.link.split('//')[1];
+            return link.split('/')[0];
+        } catch (err) {
+            return null;
+        }
     }
 }
